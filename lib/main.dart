@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Students.dart';
+import 'StudentsManual.dart';
 import 'classes.dart';
+import 'classesManual.dart';
 import 'classes_students.dart';
 import 'database_helper.dart';
 
@@ -50,39 +52,85 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.all(10),
-              height: 50.0,
-              child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.pink,)),
-                onPressed: () {
-                  Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => Students()));
-                },
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                textColor: Colors.black,
-                child: Text("Insert To Students",
-                    style: TextStyle(fontSize: 15)),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 50.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.pink,)),
+                    onPressed: () {
+                      Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => StudentsManual()));
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white,
+                    textColor: Colors.black,
+                    child: Text("M.Students",
+                        style: TextStyle(fontSize: 15)),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 50.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.pink,)),
+                    onPressed: () {
+                      Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => Students()));
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white,
+                    textColor: Colors.black,
+                    child: Text("A.Students",
+                        style: TextStyle(fontSize: 15)),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              margin: EdgeInsets.all(10),
-              height: 50.0,
-              child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                    side: BorderSide(color: Colors.pink,)),
-                onPressed: () {
-                  Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => Classes()));
-                },
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                textColor: Colors.black,
-                child: Text("Insert To Classes",
-                    style: TextStyle(fontSize: 15)),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 50.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.pink,)),
+                    onPressed: () {
+                      Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => ClassesManual()));
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white,
+                    textColor: Colors.black,
+                    child: Text("M.Classes",
+                        style: TextStyle(fontSize: 15)),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  height: 50.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                        side: BorderSide(color: Colors.pink,)),
+                    onPressed: () {
+                      Navigator.of(context).push(PageRouteBuilder(opaque: true,pageBuilder: (BuildContext context, _, __) => Classes()));
+                    },
+                    padding: EdgeInsets.all(10.0),
+                    color: Colors.white,
+                    textColor: Colors.black,
+                    child: Text("A.Classes",
+                        style: TextStyle(fontSize: 15)),
+                  ),
+                ),
+              ],
             ),
             Container(
               margin: EdgeInsets.all(10),
